@@ -35,13 +35,13 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('assets/img/about-bg.jpg')">
+        <header class="masthead" style="background-image: url('https://static.wikia.nocookie.net/mariokart/images/2/2a/Mk8-DLC-Course-SNES_RainbowRoad.jpg/revision/latest?cb=20150822070236')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="page-heading">
-                            <h1>About Me</h1>
-                            <span class="subheading">This is what I do.</span>
+                            <h1>Better Than Rainbow Road</h1>
+                            <span class="subheading">Go Kart Simulation Through Different Tunnel Scenes</span>
                         </div>
                     </div>
                 </div>
@@ -52,9 +52,64 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+                        <p><b>Team: </b> Shaurya Jain, Carolyn Liu, Lance Mathias, Eric Nguyen</p>
+                        <p><b>Summary: </b> We will be creating the rainbow road simulation from the driver’s point of view and adding random objects throughout the ride.
+                                            The environment around the road will change through different scenes like going through space, a glass tunnel surrounded by water, and a mineshaft (maybe).
+                        </p>
+                        <h2>Problem Description</h2>
+                        <p><b>Context: </b> We began brainstorming by thinking of different light effects in different scenes.
+                                            Then, we thought of a roller coaster and the Mario Kart tracks.
+                                            We saw those images and were inspired to make our own track with cool items and objects along the way, and this is the result of that.
+                        </p>
+                        <p><b>Problem we are trying to solve: </b> With all the unique objects in the environment of the road, we would have to tackle how the environment looks to the camera at different positions in world space.
+                                                                   Each object has its own properties in how it may reflect, refract, or absorb light, and we need to render images that accurately represent those qualities.
+                        </p>
+                        <p><b>Importance: </b> We show how different environments and materials can look through ray-tracing and consider properties such as the index of refraction of different substances.</p>
+                        <p><b>Challenging parts: </b> Understanding and modeling the effects of those properties on light as that light gets reflected back to the moving camera will be difficult.</p>
+                        <h2>Goals & Deliverables</h2>
+                        <p>Our main focus will be how different materials affect light. Our demo will be a video from the perspective of the rider going through the ride.</p>
+                        <p><b>What we plan to deliver: </b> Our main goal is to create the two or three different scenes that the ride will go through. We will be focusing on different computer graphics techniques in each environment.</p>
+                        <p>Our first setting will be in space. This focuses on light reflectance and refraction as the rainbow road will be semi-transparent where you can see some of the stars in the background. There will also be planets and asteroids that will move and rotate. (See below for a reference.)</p>
+                        <figure> <img src="assets/img/space-scene.png" style="width:70%"/> </figure>
+                        <p>Our next setting will be in a glass tunnel surrounded by water. This focuses on light refraction effects to deal with the water and glass in the dome. (See below for a reference.)</p>
+                        <figure> <img src="assets/img/water-scene.png" style="width:70%"/> </figure>
+                        <p><b>What we hope to achieve: </b> 
+                            <ul>  
+                                <li> We want to add another setting that will be in a mineshaft, which will include glowing ores as light. This focuses on light reflectance and refraction as there will be light from the rainbow road and from the ores.</li>
+                                <li> Instead of having the camera above the road, we will add the camera inside a cart and have the point of view from be right above the cart.</li>
+                            </ul>
+                        </p>
+                        <p> We will measure the quality of our system by checking if we can see through the road in space, if the objects in the water have a tint over it and change in size to make it seem like they are in water, and if each ore is able to emit their own light.</p>
+                        <h2>Schedule</h2>
+                        <p><b>Week 1: </b> Playing around with things + finish space scene
+                            <ul>
+                                <li> 4/4-4/7: Create a straight road (colored), one star, planet, and asteroid on Blender</li>
+                                <li> 4/7- 4/11: Playing around with things</li>
+                                <ul>
+                                    <li> Create space scene</li>
+                                    <li> Figure out how to move the camera and reorient the camera in world space</li>
+                                    <li> Figure out how to move objects in world space to simulate a changing environment along with the camera</li>
+                                </ul>
+                                <li> 4/11-4/13 (weekend): Finish space scene</li>
+                                <ul>
+                                    <li> Finish up scene on Blender if needed, do a simple water scene</li>
+                                    <li> Code camera movements on space scene</li>
+                                </ul>
+                            </ul>
+                        </p>
+                        <p><b>Week 2: </b> Work on water scene
+                            <ul>
+                                <li> 4/14-4/17: Do water scene stuff</li>
+                                <li> 4/18-4/21: Make the entire water scene on blender, start mine scene</li>
+                            </ul>
+                        </p>
+                        <p><b>Week 3: </b> Finish water scene + do and finish mine scenes
+                            <ul>
+                                <li> 4/21-4/24: Be done with the water scene and finish mine scene on blender</li>
+                                <li> 4/24-4/27 (weekend): Finish mine scene</li>
+                            </ul>
+                        </p>
+                        <p><b> Week 4: </b> Render time + final touches + create final video!</p>
                     </div>
                 </div>
             </div>
