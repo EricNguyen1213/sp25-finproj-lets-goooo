@@ -82,6 +82,8 @@
                         </ol>
                         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRduV1aTqsfUX727-HrZrBeMRJnA8-3ZLnBYMAZm7rbMd5DsKk8dH_k2HYNgC9hmKj7BXdjJHJf0IQO/embed?start=false&loop=true&delayms=3000" frameborder="20" width="650" height="500" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                         <h2>Preliminary Results:</h2>
+                        <figure> <img src="assets/img/spheres.png" style="width:100%"/> </figure>
+                        <p>This is the output to our implementation attempt of Volumetric Integration. By retracing the path from the camera to the light source, we randomly decide whether the next point in the path is from a position it got scattered along the way or intersected/reflected on a surface. While doing this, we attempted to calculate the radiance effect this had to the incoming radiance. It would have also took into account the probability of each status: scattered by this direction, or reflected by this direction, for Monte Carlo integration. Our code's main issue that we plan to fix is the fact that it still needed to account for the one bounce radiance at each next position while taking the volumetric integration effect into account.</p>
                         <h2>Progress Relative to Our Plan:</h2>
                         <p>Since we decided not to implement our first project idea, our plan from the project proposal is not relevant anymore and we have established this new plan:</p>
                         <ul>
